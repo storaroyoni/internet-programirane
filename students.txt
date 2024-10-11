@@ -1,0 +1,4 @@
+Bobi Milanov,5
+Yoanna Stamenova,6
+Valeri Todorov,4
+Simeon Simeonov,2
