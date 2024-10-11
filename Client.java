@@ -15,8 +15,13 @@ public class Client {
             String command;
 
             while (true) {
-                System.out.println("input command(ADD, VIEW, AVERAGE, EXIT):");
+                System.out.println("input command (ADD, VIEW, AVERAGE, EXIT):");
                 command = userInput.readLine();
+
+                if (command == null) {
+                    System.out.println("input stream closed");
+                    break;
+                }
 
                 if ("EXIT".equalsIgnoreCase(command)) {
                     break;
@@ -26,8 +31,16 @@ public class Client {
                     case "ADD":
                         System.out.println("input student name:");
                         String name = userInput.readLine();
+                        if (name == null) {
+                            System.out.println("input stream closed");
+                            break;
+                        }
                         System.out.println("input student grade:");
                         String grade = userInput.readLine();
+                        if (grade == null) {
+                            System.out.println("input stream closed");
+                            break;
+                        }
                         out.println("ADD," + name + "," + grade);
                         break;
                     case "VIEW":
